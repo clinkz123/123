@@ -1,0 +1,4 @@
+cron:
+  - description: autosign
+    url: /do.php
+    schedule: every 5 minutes
