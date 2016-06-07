@@ -1,0 +1,16 @@
+application: bdtbqd
+runtime: php55
+version: 443
+api_version: 1
+
+handlers:
+  - url: /
+    script : index.php
+
+  - url: /(.+\.php)$
+    script: \1
+
+  - url: /(.+\.(gif|png|jpg|css|js|html|ttf|woff|eot|svg))$
+    static_files: \1
+    upload: .+\.(gif|png|jpg|css|js|html|ttf|woff|eot|svg)$
+    application_readable: true
